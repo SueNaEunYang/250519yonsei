@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide active" id="slide2">
+            <div class="slide-content">
+                <h2 class="slide-title">목차</h2>
+                <div class="content-box">
+                    <div class="text-content">
+                        <div class="toc-container">
+                            <ul class="toc-list">
+                                <li class="toc-item" id="toc-1">
+                                    <span class="toc-number">1</span>
+                                    <span class="toc-text">소개</span>
+                                </li>
+                                <li class="toc-item" id="toc-2">
+                                    <span class="toc-number">2</span>
+                                    <span class="toc-text">개발자 생태계</span>
+                                </li>
+                                <li class="toc-item" id="toc-3">
+                                    <span class="toc-number">3</span>
+                                    <span class="toc-text">개발자의 직무</span>
+                                </li>
+                                <li class="toc-item" id="toc-4">
+                                    <span class="toc-number">4</span>
+                                    <span class="toc-text">AI 코딩 도구와 개발자</span>
+                                </li>
+                                <li class="toc-item" id="toc-5">
+                                    <span class="toc-number">5</span>
+                                    <span class="toc-text">대학생 개발자로 참여하기</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="visual-element">
+                        <div class="toc-visual">
+                            <div class="toc-flow">
+                                <div class="toc-node" id="toc-node-1">
+                                    <div class="node-number">1</div>
+                                    <div class="node-icon"><i class="fas fa-user-tie"></i></div>
+                                </div>
+                                <div class="toc-arrow"></div>
+                                <div class="toc-node" id="toc-node-2">
+                                    <div class="node-number">2</div>
+                                    <div class="node-icon"><i class="fas fa-network-wired"></i></div>
+                                </div>
+                                <div class="toc-arrow"></div>
+                                <div class="toc-node" id="toc-node-3">
+                                    <div class="node-number">3</div>
+                                    <div class="node-icon"><i class="fas fa-laptop-code"></i></div>
+                                </div>
+                                <div class="toc-arrow"></div>
+                                <div class="toc-node" id="toc-node-4">
+                                    <div class="node-number">4</div>
+                                    <div class="node-icon"><i class="fas fa-robot"></i></div>
+                                </div>
+                                <div class="toc-arrow"></div>
+                                <div class="toc-node" id="toc-node-5">
+                                    <div class="node-number">5</div>
+                                    <div class="node-icon"><i class="fas fa-graduation-cap"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button id="prev-btn" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+            <div id="slide-counter">2 / 19</div>
+            <button id="next-btn" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="slide-indicator">
+            <div class="indicator" data-slide="0"></div>
+            <div class="indicator active" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
+            <div class="indicator" data-slide="3"></div>
+            <div class="indicator" data-slide="4"></div>
+            <div class="indicator" data-slide="5"></div>
+            <div class="indicator" data-slide="6"></div>
+            <div class="indicator" data-slide="7"></div>
+            <div class="indicator" data-slide="8"></div>
+            <div class="indicator" data-slide="9"></div>
+            <div class="indicator" data-slide="10"></div>
+            <div class="indicator" data-slide="11"></div>
+            <div class="indicator" data-slide="12"></div>
+            <div class="indicator" data-slide="13"></div>
+            <div class="indicator" data-slide="14"></div>
+            <div class="indicator" data-slide="15"></div>
+            <div class="indicator" data-slide="16"></div>
+            <div class="indicator" data-slide="17"></div>
+            <div class="indicator" data-slide="18"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
