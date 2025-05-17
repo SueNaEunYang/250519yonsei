@@ -7,6 +7,129 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .ai-changes-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            max-height: calc(100vh - 200px); /* 상단 여백과 하단 네비게이션을 고려한 높이 */
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) transparent;
+        }
+
+        .ai-changes-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .ai-changes-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .ai-changes-container::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .changes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+
+        .change-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            padding: 0.8rem;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .change-item:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            transform: translateX(5px);
+        }
+
+        .change-item i {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .change-item strong {
+            color: var(--primary-dark);
+            margin-right: 0.4rem;
+            white-space: nowrap;
+        }
+
+        .impact-note {
+            margin-top: 1rem;
+            padding: 0.8rem;
+            background: linear-gradient(135deg, rgba(177, 156, 217, 0.1), rgba(255, 192, 203, 0.1));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .impact-note i {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .impact-note p {
+            margin: 0;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .ai-intro {
+            text-align: center;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, rgba(177, 156, 217, 0.1), rgba(255, 192, 203, 0.1));
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+        }
+
+        .ai-intro .big-text {
+            margin: 0.4rem 0;
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+        }
+
+        .highlight {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        @media (max-width: 1200px) {
+            .changes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .change-item {
+                padding: 0.6rem;
+                font-size: 0.9rem;
+            }
+            
+            .ai-intro .big-text {
+                font-size: 1.1rem;
+            }
+            
+            .highlight {
+                font-size: 1.2rem;
+                margin-bottom: 0.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="presentation-container">
@@ -15,19 +138,64 @@
                 <h2 class="slide-title">AI 시대의 개발자</h2>
                 <div class="content-box">
                     <div class="text-content full-width">
-                        <div class="ai-intro">
-                            <h3 class="highlight">AI, 기술 발전의 새로운 물결</h3>
-                            <p class="big-text">모든 기술은 처음이 있었다</p>
-                            <p class="big-text">개발 방식, 서비스, 일하는 방식의 변화 예고</p>
-                        </div>
-                    </div>
-                    <div class="visual-element full-width">
-                        <div class="ai-wave-visual">
-                            <div class="wave wave1"></div>
-                            <div class="wave wave2"></div>
-                            <div class="wave wave3"></div>
-                            <div class="ai-icon">
-                                <i class="fas fa-brain"></i>
+                        <div class="ai-changes-container">
+                            <div class="ai-intro">
+                                <h3 class="highlight">AI, 기술 발전의 새로운 물결</h3>
+                                <p class="big-text">모든 기술은 처음이 있었다</p>
+                                <p class="big-text">개발 방식, 서비스, 일하는 방식의 변화 예고</p>
+                            </div>
+
+                            <div class="ai-changes">
+                                <h3 class="highlight">AI가 변화시키는 개발 영역</h3>
+                                <div class="changes-grid">
+                                    <div class="change-item">
+                                        <i class="fas fa-code"></i>
+                                        <div>
+                                            <strong>코드 작성:</strong> AI 기반 코드 자동완성 및 생성 도구로 반복 작업 감소, 생산성 향상
+                                        </div>
+                                    </div>
+                                    <div class="change-item">
+                                        <i class="fas fa-search"></i>
+                                        <div>
+                                            <strong>코드 리뷰:</strong> 버그 검출, 보안 취약점 식별, 코드 품질 개선 제안
+                                        </div>
+                                    </div>
+                                    <div class="change-item">
+                                        <i class="fas fa-bug"></i>
+                                        <div>
+                                            <strong>디버깅:</strong> 오류 원인 파악 및 해결책 제시로 문제 해결 시간 단축
+                                        </div>
+                                    </div>
+                                    <div class="change-item">
+                                        <i class="fas fa-file-alt"></i>
+                                        <div>
+                                            <strong>문서화:</strong> 코드 설명, 주석, API 문서 자동 생성으로 유지보수성 향상
+                                        </div>
+                                    </div>
+                                    <div class="change-item">
+                                        <i class="fas fa-vial"></i>
+                                        <div>
+                                            <strong>테스트 자동화:</strong> 테스트 케이스 작성 및 실행으로 품질 보증 강화
+                                        </div>
+                                    </div>
+                                    <div class="change-item">
+                                        <i class="fas fa-book"></i>
+                                        <div>
+                                            <strong>API 이해 및 활용:</strong> 복잡한 라이브러리나 프레임워크 학습 곡선 완화
+                                        </div>
+                                    </div>
+                                    <div class="change-item">
+                                        <i class="fas fa-sync"></i>
+                                        <div>
+                                            <strong>레거시 코드 현대화:</strong> 구형 시스템 분석 및 리팩토링 지원
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="impact-note">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <p>이러한 변화는 개발자의 일상 업무를 혁신하고, 더 복잡한 문제 해결과 창의적 작업에 집중할 수 있는 환경을 조성합니다.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
