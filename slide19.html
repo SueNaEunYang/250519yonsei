@@ -7,6 +7,178 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .content-box {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        .text-content {
+            flex: 1;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .highlight {
+            color: var(--primary-dark);
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .kakao-opportunities {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .kakao-opportunities li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .kakao-opportunities li:hover {
+            transform: translateX(10px);
+        }
+
+        .kakao-opportunities i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            width: 40px;
+            text-align: center;
+        }
+
+        .note {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(var(--primary-rgb), 0.1);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--primary-dark);
+        }
+
+        .note i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .visual-element {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1rem;
+        }
+
+        .kakao-visual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .kakao-logo {
+            width: 120px;
+            height: 120px;
+            background: #FEE500;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+
+        .logo-face {
+            position: relative;
+            width: 60px;
+            height: 60px;
+        }
+
+        .logo-eye {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #3C1E1E;
+            border-radius: 50%;
+        }
+
+        .left-eye {
+            left: 15px;
+            top: 20px;
+        }
+
+        .right-eye {
+            right: 15px;
+            top: 20px;
+        }
+
+        .logo-mouth {
+            position: absolute;
+            width: 24px;
+            height: 12px;
+            background: #3C1E1E;
+            border-radius: 0 0 12px 12px;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .opportunity-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+            width: 100%;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .opportunity-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 120px;
+        }
+
+        .opportunity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .card-title {
+            font-weight: 500;
+            color: var(--primary-dark);
+        }
+    </style>
 </head>
 <body>
     <div class="presentation-container">
