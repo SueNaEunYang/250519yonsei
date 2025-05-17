@@ -7,6 +7,68 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .content-box {
+            padding: 1.5rem;
+            height: 100%;
+        }
+
+        .text-content {
+            width: 100%;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .why-experience {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .experience-reason {
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .experience-reason:hover {
+            transform: translateY(-5px);
+        }
+
+        .highlight {
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .highlight i {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            width: 40px;
+            text-align: center;
+        }
+
+        .experience-reason p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
     <div class="presentation-container">
@@ -17,45 +79,20 @@
                     <div class="text-content">
                         <div class="why-experience">
                             <div class="experience-reason">
-                                <h3 class="highlight"><i class="fas fa-search"></i> 나를 알아가는 시간:</h3>
+                                <h3 class="highlight"><i class="fas fa-search"></i> 나를 알아가는 시간</h3>
                                 <p>내가 무엇을 좋아하고 잘하는지 발견 (분야 탐색)</p>
                             </div>
                             <div class="experience-reason">
-                                <h3 class="highlight"><i class="fas fa-level-up-alt"></i> 진짜 실력 키우기:</h3>
+                                <h3 class="highlight"><i class="fas fa-level-up-alt"></i> 진짜 실력 키우기</h3>
                                 <p>이론 → 실제 적용 (문제 해결 능력 UP!)</p>
                             </div>
                             <div class="experience-reason">
-                                <h3 class="highlight"><i class="fas fa-handshake"></i> 소중한 인연 만들기:</h3>
+                                <h3 class="highlight"><i class="fas fa-handshake"></i> 소중한 인연 만들기</h3>
                                 <p>함께 성장하는 동료, 길을 열어줄 선배 (네트워킹)</p>
                             </div>
                             <div class="experience-reason">
-                                <h3 class="highlight"><i class="fas fa-book-open"></i> 나만의 이야기 만들기:</h3>
+                                <h3 class="highlight"><i class="fas fa-book-open"></i> 나만의 이야기 만들기</h3>
                                 <p>경험 = 최고의 포트폴리오</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="visual-element">
-                        <div class="why-experience-visual">
-                            <div class="experience-journey">
-                                <div class="journey-step" id="step1">
-                                    <div class="step-icon"><i class="fas fa-search"></i></div>
-                                    <div class="step-arrow"></div>
-                                </div>
-                                <div class="journey-step" id="step2">
-                                    <div class="step-icon"><i class="fas fa-level-up-alt"></i></div>
-                                    <div class="step-arrow"></div>
-                                </div>
-                                <div class="journey-step" id="step3">
-                                    <div class="step-icon"><i class="fas fa-handshake"></i></div>
-                                    <div class="step-arrow"></div>
-                                </div>
-                                <div class="journey-step" id="step4">
-                                    <div class="step-icon"><i class="fas fa-book-open"></i></div>
-                                </div>
-                                <div class="journey-result">
-                                    <div class="result-icon"><i class="fas fa-star"></i></div>
-                                    <div class="result-text">성장</div>
-                                </div>
                             </div>
                         </div>
                     </div>
