@@ -7,6 +7,106 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .content-box {
+            display: flex;
+            gap: 2rem;
+            align-items: stretch;
+            height: 100%;
+        }
+
+        .text-content {
+            flex: 2;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .devrel-info {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 1rem;
+        }
+
+        .visual-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+        }
+
+        .connection-visual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            height: 100%;
+        }
+
+        .connection-item {
+            text-align: center;
+            padding: 0.8rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            width: 100%;
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .connection-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .connection-icon {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0.4rem;
+        }
+
+        .connection-text {
+            font-weight: 500;
+            color: var(--primary-dark);
+            font-size: 0.9rem;
+        }
+
+        .connection-arrow {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin: -0.2rem 0;
+        }
+
+        .highlight {
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .animated-list {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .animated-list li {
+            margin-bottom: 0.6rem;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
     <div class="presentation-container">
@@ -34,40 +134,31 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="visual-element">
-                        <div class="devrel-visual">
-                            <div class="ecosystem-container">
-                                <div class="ecosystem-center">
-                                    <div class="center-icon">
-                                        <i class="fas fa-code"></i>
-                                    </div>
-                                    <div class="center-text">기술</div>
+                    <div class="visual-content">
+                        <div class="connection-visual">
+                            <div class="connection-item">
+                                <div class="connection-icon">
+                                    <i class="fas fa-code"></i>
                                 </div>
-                                <div class="ecosystem-orbit">
-                                    <div class="orbit-item" id="community">
-                                        <div class="orbit-icon"><i class="fas fa-users"></i></div>
-                                        <div class="orbit-text">커뮤니티</div>
-                                    </div>
-                                    <div class="orbit-item" id="conference">
-                                        <div class="orbit-icon"><i class="fas fa-microphone"></i></div>
-                                        <div class="orbit-text">컨퍼런스</div>
-                                    </div>
-                                    <div class="orbit-item" id="content">
-                                        <div class="orbit-icon"><i class="fas fa-book"></i></div>
-                                        <div class="orbit-text">콘텐츠</div>
-                                    </div>
-                                    <div class="orbit-item" id="networking">
-                                        <div class="orbit-icon"><i class="fas fa-handshake"></i></div>
-                                        <div class="orbit-text">네트워킹</div>
-                                    </div>
+                                <div class="connection-text">기술</div>
+                            </div>
+                            <div class="connection-arrow">
+                                <i class="fas fa-arrows-alt-v"></i>
+                            </div>
+                            <div class="connection-item">
+                                <div class="connection-icon">
+                                    <i class="fas fa-user-friends"></i>
                                 </div>
-
-                                <div class="devrel-bridge">
-                                    <div class="bridge-icon">
-                                        <i class="fas fa-bridge"></i>
-                                    </div>
-                                    <div class="bridge-text">DevRel</div>
+                                <div class="connection-text">DevRel</div>
+                            </div>
+                            <div class="connection-arrow">
+                                <i class="fas fa-arrows-alt-v"></i>
+                            </div>
+                            <div class="connection-item">
+                                <div class="connection-icon">
+                                    <i class="fas fa-users"></i>
                                 </div>
+                                <div class="connection-text">개발자 커뮤니티</div>
                             </div>
                         </div>
                     </div>
