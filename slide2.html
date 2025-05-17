@@ -7,6 +7,67 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .content-box {
+            padding: 2rem;
+            height: 100%;
+        }
+
+        .text-content {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .toc-container {
+            width: 100%;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-item {
+            display: flex;
+            align-items: center;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .toc-item:hover {
+            transform: translateX(10px);
+        }
+
+        .toc-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-right: 1.5rem;
+        }
+
+        .toc-text {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
     <div class="presentation-container">
@@ -38,36 +99,6 @@
                                     <span class="toc-text">대학생 개발자로 참여하기</span>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="visual-element">
-                        <div class="toc-visual">
-                            <div class="toc-flow">
-                                <div class="toc-node" id="toc-node-1">
-                                    <div class="node-number">1</div>
-                                    <div class="node-icon"><i class="fas fa-user-tie"></i></div>
-                                </div>
-                                <div class="toc-arrow"></div>
-                                <div class="toc-node" id="toc-node-2">
-                                    <div class="node-number">2</div>
-                                    <div class="node-icon"><i class="fas fa-network-wired"></i></div>
-                                </div>
-                                <div class="toc-arrow"></div>
-                                <div class="toc-node" id="toc-node-3">
-                                    <div class="node-number">3</div>
-                                    <div class="node-icon"><i class="fas fa-laptop-code"></i></div>
-                                </div>
-                                <div class="toc-arrow"></div>
-                                <div class="toc-node" id="toc-node-4">
-                                    <div class="node-number">4</div>
-                                    <div class="node-icon"><i class="fas fa-robot"></i></div>
-                                </div>
-                                <div class="toc-arrow"></div>
-                                <div class="toc-node" id="toc-node-5">
-                                    <div class="node-number">5</div>
-                                    <div class="node-icon"><i class="fas fa-graduation-cap"></i></div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
