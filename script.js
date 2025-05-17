@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "slide11.html",
     "slide12.html",
     "slide13.html",
+    "slide13-2.html",
     "slide14.html",
     "slide15.html",
     "slide16.html",

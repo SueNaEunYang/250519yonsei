@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발자들이 가장 많이 사용하는 AI 도구</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .survey-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .survey-table th, .survey-table td {
+            padding: 0.7rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(177, 156, 217, 0.2);
+            font-size: 0.9rem;
+        }
+        
+        .survey-table th {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--light-text);
+            font-weight: 500;
+            padding: 0.8rem 0.7rem;
+        }
+        
+        .survey-overview {
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .chart-bar {
+            width: 100%;
+            height: 30px;
+            margin-bottom: 1rem;
+            background-color: rgba(240, 240, 240, 0.5);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .bar-percentage {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        
+        .survey-quote {
+            font-style: italic;
+            padding: 0.8rem 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            margin: 1rem 0;
+            box-shadow: var(--shadow);
+            font-size: 0.95rem;
+        }
+        
+        .key-insights {
+            margin-top: 1rem;
+            padding: 0.8rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .key-insights h3 {
+            margin-bottom: 0.8rem;
+        }
+        
+        .trend-numbers {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+        }
+        
+        .trend-item {
+            text-align: center;
+            padding: 0.8rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .trend-item span {
+            font-size: 1.8rem !important;
+            font-weight: bold;
+            color: var(--primary-dark);
+        }
+        
+        .trend-item p {
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+
+        .subtitle {
+            color: var(--secondary-dark);
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .ai-trends {
+            margin: 1rem 0;
+            padding: 0.8rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .content-box {
+            gap: 1.5rem;
+        }
+
+        .highlight {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .animated-list li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide active" id="slide13-2">
+            <div class="slide-content">
+                <h2 class="slide-title">개발자들이 가장 많이 사용하는 AI 도구</h2>
+                <p class="subtitle">2024년 Stack Overflow 개발자 서베이 결과</p>
+                
+                <div class="content-box">
+                    <div class="text-content">
+                        <div class="survey-overview">
+                            <h3 class="highlight">서베이 개요</h3>
+                            <ul class="animated-list">
+                                <li><i class="fas fa-users"></i> 65,437명 개발자 (185개국)</li>
+                                <li><i class="fas fa-calendar-alt"></i> 2024년 5월 실시</li>
+                                <li><i class="fas fa-clipboard-list"></i> 기술, 도구, AI, 개발자 경험 등 조사</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="ai-trends">
+                            <h3 class="highlight">AI 도구 사용 추세</h3>
+                            <ul class="animated-list">
+                                <li><i class="fas fa-chart-line"></i> 76% 개발자가 AI 도구 사용 중이거나 사용 계획 (↑ 전년 70%)</li>
+                                <li><i class="fas fa-check-circle"></i> 62% 현재 AI 도구 실제 사용 중 (↑ 전년 44%)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="ai-tools">
+                            <h3 class="highlight">인기 AI 도구 및 만족도</h3>
+                            <table class="survey-table">
+                                <thead>
+                                    <tr>
+                                        <th>순위</th>
+                                        <th>AI 도구</th>
+                                        <th>사용 경험</th>
+                                        <th>정기적 사용</th>
+                                        <th>계속 사용 의향</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fas fa-trophy" style="color: gold;"></i></td>
+                                        <td>ChatGPT</td>
+                                        <td>69%</td>
+                                        <td>49%</td>
+                                        <td>75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-medal" style="color: silver;"></i></td>
+                                        <td>GitHub Copilot</td>
+                                        <td>40%</td>
+                                        <td>26%</td>
+                                        <td>74%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-award" style="color: #cd7f32;"></i></td>
+                                        <td>Replit Ghostwrite/Tabnine</td>
+                                        <td>36%</td>
+                                        <td>20%</td>
+                                        <td>36%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <div class="survey-quote">
+                                <i class="fas fa-quote-left" style="margin-right: 0.5rem; color: var(--secondary-color);"></i>
+                                <span>ChatGPT 사용자 중 41%가 내년에 GitHub Copilot 사용 희망</span>
+                                <i class="fas fa-quote-right" style="margin-left: 0.5rem; color: var(--secondary-color);"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="key-insights">
+                            <h3 class="highlight">시사점</h3>
+                            <ul class="animated-list">
+                                <li><i class="fas fa-lightbulb"></i> 개발자 사이에서 AI 도구 채택 빠르게 확산</li>
+                                <li><i class="fas fa-star"></i> ChatGPT와 GitHub Copilot이 현재 가장 널리 사용되는 AI 개발 도구</li>
+                                <li><i class="fas fa-chart-bar"></i> 개발자들의 AI 도구 지속 사용 의향 높음</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="visual-element">
+                        <div class="chart-container">
+                            <h3 class="highlight">AI 도구 사용 경험</h3>
+                            <div class="chart-bar chatgpt-bar">
+                                <div class="bar-fill"></div>
+                                <span class="bar-label">ChatGPT</span>
+                                <span class="bar-percentage">69%</span>
+                            </div>
+                            <div class="chart-bar github-bar">
+                                <div class="bar-fill"></div>
+                                <span class="bar-label">GitHub Copilot</span>
+                                <span class="bar-percentage">40%</span>
+                            </div>
+                            <div class="chart-bar replit-bar">
+                                <div class="bar-fill"></div>
+                                <span class="bar-label">Replit/Tabnine</span>
+                                <span class="bar-percentage">36%</span>
+                            </div>
+                            
+                            <h3 class="highlight">AI 도구 사용 추세</h3>
+                            <div class="trend-visual">
+                                <div class="trend-icon">
+                                    <i class="fas fa-chart-line" style="font-size: 3rem; color: var(--primary-dark);"></i>
+                                </div>
+                                <div class="trend-numbers">
+                                    <div class="trend-item" style="margin: 1rem 0; text-align: center;">
+                                        <span style="font-size: 2.5rem; font-weight: bold; color: var(--primary-dark);">76%</span>
+                                        <p>AI 도구 사용 중/계획</p>
+                                    </div>
+                                    <div class="trend-item" style="margin: 1rem 0; text-align: center;">
+                                        <span style="font-size: 2.5rem; font-weight: bold; color: var(--secondary-dark);">62%</span>
+                                        <p>현재 AI 도구 사용 중</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button id="prev-btn" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+            <div id="slide-counter">10 / 16</div>
+            <button id="next-btn" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="slide-indicator">
+            <div class="indicator" data-slide="0"></div>
+            <div class="indicator" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
+            <div class="indicator" data-slide="3"></div>
+            <div class="indicator" data-slide="4"></div>
+            <div class="indicator" data-slide="5"></div>
+            <div class="indicator" data-slide="6"></div>
+            <div class="indicator" data-slide="7"></div>
+            <div class="indicator" data-slide="8"></div>
+            <div class="indicator active" data-slide="9"></div>
+            <div class="indicator" data-slide="10"></div>
+            <div class="indicator" data-slide="11"></div>
+            <div class="indicator" data-slide="12"></div>
+            <div class="indicator" data-slide="13"></div>
+            <div class="indicator" data-slide="14"></div>
+            <div class="indicator" data-slide="15"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
